@@ -78,7 +78,7 @@ public class BookService {
 
         for(Author author: authorList){
             List<Publish> publishList = author.getPublishList();
-            bookList.add(publishList.get(0).getBook());
+            bookList.add(publishList.get(publishList.size()-1).getBook());
         }
 
         return bookList;
